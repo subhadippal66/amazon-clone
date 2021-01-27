@@ -1,5 +1,6 @@
 import React from "react";
 import "./Product.css";
+import NumberFormat from "react-number-format";
 
 function Product({ title, image, price, rating }) {
   return (
@@ -7,11 +8,28 @@ function Product({ title, image, price, rating }) {
       <div className="product_info">
         <p>{title}</p>
         <p className="price">
-          <small>₹</small>
-          <strong>{price} </strong>
+          <NumberFormat
+            value={price}
+            displayType={"text"}
+            thousandSeparator={true}
+            thousandsGroupStyle="lakh"
+            prefix="₹"
+            decimalSeparator="."
+            decimalScale={2}
+            fixedDecimalScale={true}
+          />
         </p>
         <div className="product_rating">
-          <p>⭐</p>
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p>⭐</p>
+            ))}
+          {/* {function rat(r) {
+            for (let index = 0; index < r; index++) {
+              <p>⭐</p>;
+            }
+          }} */}
         </div>
       </div>
       <img className="product_image" src={image} alt="product image" />

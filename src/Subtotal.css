@@ -1,0 +1,41 @@
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  margin-left: 10px;
+  padding: 10px 20px;
+  max-width: 300px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.price h3 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.price div {
+  font-weight: 800;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.btn_process {
+  background-color: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  color: #111;
+  border-color: #a88734 #9c7e31 #846a29;
+  padding: 5px;
+}
