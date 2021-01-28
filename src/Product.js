@@ -1,8 +1,23 @@
 import React from "react";
 import "./Product.css";
 import NumberFormat from "react-number-format";
+import { useStateValue } from "./Stateprovider";
 
-function Product({ title, image, price, rating }) {
+function Product({ title, image, price, rating, id }) {
+  const [{ basket }, dispatch] = useStateValue();
+  //console.log(basket);
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: Date.now(),
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product_info">
@@ -25,15 +40,14 @@ function Product({ title, image, price, rating }) {
             .map((_, i) => (
               <p>⭐</p>
             ))}
-          {/* {function rat(r) {
-            for (let index = 0; index < r; index++) {
-              <p>⭐</p>;
-            }
-          }} */}
         </div>
       </div>
-      <img className="product_image" src={image} alt="product image" />
-      <button>Add To Basket</button>
+
+      <img className="product_image" src={image} alt="" />
+
+      <button onClick={addToBasket} className="btn">
+        Add To Basket
+      </button>
     </div>
   );
 }
