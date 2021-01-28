@@ -58,3 +58,25 @@
   border: 1px solid darkgray;
   margin-top: 10px;
 }
+
+.google_login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+.google_login > img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.google_login:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 5px #f0c14b);
+}

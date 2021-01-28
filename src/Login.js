@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import "./Login.css";
 import logo from "./media/Amazon logo.png";
 import { auth } from "./firebase";
+import firebase from "firebase";
 import { useStateValue } from "./Stateprovider";
+import google from "./media/google.png";
 
 function Login() {
   const [{ user }, dispatch] = useStateValue();
@@ -51,6 +53,18 @@ function Login() {
       })
       .catch((e) => alert(e.message));
   };
+  const googleSignIn = (e) => {
+    e.preventDefault();
+    const g_provider = new firebase.auth.GoogleAuthProvider();
+    auth
+      .signInWithPopup(g_provider)
+      .then((auth) => {
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((e) => alert(e.message));
+  };
   return (
     <div className="login">
       <Link to="/">
@@ -83,6 +97,10 @@ function Login() {
         </p>
         <button onClick={register} className="login_registerBtn">
           Create Your Amazon Account
+        </button>
+        <button className="google_login" onClick={googleSignIn}>
+          Continue With Google
+          <img src={google} />
         </button>
       </div>
     </div>
