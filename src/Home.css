@@ -22,4 +22,9 @@
   display: flex;
   z-index: -1;
   margin: 0 5px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.product_container::-webkit-scrollbar {
+  display: none;
 }

@@ -3,7 +3,7 @@ import "./Product.css";
 import NumberFormat from "react-number-format";
 import { useStateValue } from "./Stateprovider";
 
-function Product({ title, image, price, rating, id }) {
+function Product({ title, image, price, rating, id = Date.now() }) {
   const [{ basket }, dispatch] = useStateValue();
   //console.log(basket);
   const addToBasket = () => {

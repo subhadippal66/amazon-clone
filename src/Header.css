@@ -41,6 +41,10 @@
   flex-direction: column;
   margin: 0 10px;
   color: white;
+  transition: all 0.2s ease;
+}
+.header_option:hover {
+  filter: drop-shadow(0 0 5px #ffb700);
 }
 .option1 {
   font-size: 12px;
@@ -54,6 +58,10 @@
   align-items: center;
   color: white;
   outline: none;
+  transition: all 0.2s ease;
+}
+.header_basket:hover {
+  filter: drop-shadow(0 0 5px #ffb700);
 }
 .basket {
   margin: 0 10px;

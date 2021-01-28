@@ -11,6 +11,7 @@
   padding: 20px;
   width: 100%;
   top: 100%;
+  transition: all 0.3s ease;
 }
 
 .product_image {
@@ -44,4 +45,9 @@
 
 .product_rating {
   display: flex;
+}
+
+.product:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 5px #f0c14b);
 }

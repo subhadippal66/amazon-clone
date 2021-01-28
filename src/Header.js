@@ -34,7 +34,7 @@ function Header() {
       auth.signOut();
     }
   };
-  console.log(user);
+
   return (
     <div className="header">
       <Link to="/">
@@ -66,7 +66,7 @@ function Header() {
           <span className="option1">Your</span>
           <span className="option2">Prime</span>
         </div>
-        <Link to="/checkout">
+        <Link to="/checkout" className="basket__">
           <div className="header_basket">
             <ShoppingBasketIcon />
             <span className="basket basketcount">{basket?.length}</span>

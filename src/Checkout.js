@@ -4,6 +4,7 @@ import Checkout_Product from "./Checkout_Product";
 import checkout_banner from "./media/checkout_banner.jpg";
 import { useStateValue } from "./Stateprovider";
 import Subtotal from "./Subtotal";
+import FlipMove from "react-flip-move";
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
@@ -20,6 +21,7 @@ function Checkout() {
           <h2 className="checkout_title">Your Shopping Basket</h2>
           {basket.map((p) => (
             <Checkout_Product
+              key={p.id}
               id={p.id}
               title={p.title}
               price={p.price}
