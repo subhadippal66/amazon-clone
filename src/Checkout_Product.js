@@ -12,6 +12,7 @@ function Checkout_Product({ title, image, price, id }) {
       id: id,
     });
   };
+
   return (
     <div className="product_checkout">
       <img src={image} className="img" alt="" />

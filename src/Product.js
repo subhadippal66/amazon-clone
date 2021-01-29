@@ -2,15 +2,18 @@ import React from "react";
 import "./Product.css";
 import NumberFormat from "react-number-format";
 import { useStateValue } from "./Stateprovider";
+import { useHistory } from "react-router-dom";
+import { Link } from "@material-ui/core";
 
 function Product({ title, image, price, rating, id = Date.now() }) {
   const [{ basket }, dispatch] = useStateValue();
+  const history = useHistory();
   //console.log(basket);
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
-        id: Date.now(),
+        id: id,
         title: title,
         image: image,
         price: price,
@@ -21,7 +24,9 @@ function Product({ title, image, price, rating, id = Date.now() }) {
   return (
     <div className="product">
       <div className="product_info">
-        <p>{title}</p>
+        <p className="name_link" onClick={(e) => history.push(`/${id}`)}>
+          {title}
+        </p>
         <p className="price">
           <NumberFormat
             value={price}
