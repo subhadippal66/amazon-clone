@@ -22,3 +22,18 @@
   margin-top: 20px;
   width: 40%;
 }
+
+@media (max-width: 800px) {
+  .checkout {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .checkout_left {
+    width: 100%;
+  }
+  .checkout_right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -8,7 +8,7 @@ import Payment from "./Payment";
 
 function App() {
   return (
-    <Router>
+    <Router className="body">
       <div className="App">
         <Switch>
           <Route exact path="/">

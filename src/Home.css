@@ -21,7 +21,7 @@
 .product_container {
   display: flex;
   z-index: -1;
-  margin: 0 5px;
+  margin: 5px;
   overflow-y: hidden;
   overflow-x: scroll;
 }

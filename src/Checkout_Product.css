@@ -20,6 +20,7 @@
 }
 
 .remove_btn {
+  font-size: 12px;
   background-color: #f0c14b;
   border: 1px solid;
   margin-top: 20px;
@@ -34,5 +35,6 @@
 }
 
 .product_details > h3 {
+  font-size: 20px;
   margin-bottom: 5px;
 }

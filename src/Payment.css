@@ -24,3 +24,20 @@
 }
 .address {
 }
+
+@media (max-width: 800px) {
+  .payment_section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0;
+  }
+  .payment_title {
+    width: 100%;
+    margin-right: 10px;
+  }
+  /* .payment_product {
+    margin-left: 0;
+    width: 100%;
+  } */
+}

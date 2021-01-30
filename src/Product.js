@@ -50,7 +50,7 @@ function Product({ title, image, price, rating, id = Date.now() }) {
 
       <img className="product_image" src={image} alt="" />
 
-      <button onClick={addToBasket} className="btn">
+      <button onClick={addToBasket} className="btn___">
         Add To Basket
       </button>
     </div>
